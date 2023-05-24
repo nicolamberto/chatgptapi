@@ -3,7 +3,7 @@ import { MainContainer, ChatContainer, MessageList, Message, MessageInput, Typin
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const API_KEY ='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'
+const API_KEY ='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'
 
 function Chat ({data}) {
     const [typing, setTyping] = useState(false)
@@ -83,11 +83,11 @@ function Chat ({data}) {
     return(
         <motion.div drag
         dragConstraints={{
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-        }} initial={{opacity:0,scale:0}} animate={{opacity:1, scale:1}} transition={{duration:1}} style={{ position:"relative", width: "100vh", height:'80vh' }}>
+          top: -50,
+          left: -50,
+          right: 50,
+          bottom: 50,
+        }} initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.5}} style={{ position:"relative", width: "100vh", height:'80vh' }}>
             <MainContainer style={{
                         borderRadius:'10px',
                         }}>
