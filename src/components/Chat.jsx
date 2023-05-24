@@ -3,7 +3,7 @@ import { MainContainer, ChatContainer, MessageList, Message, MessageInput, Typin
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const API_KEY ='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'
+const API_KEY ='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'
 
 function Chat ({data}) {
     const [typing, setTyping] = useState(false)
