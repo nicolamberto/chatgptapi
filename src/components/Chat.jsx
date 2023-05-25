@@ -61,7 +61,7 @@ function Chat ({data}) {
         await fetch('https://api.openai.com/v1/chat/completions',{
             method:'POST',
             headers:{
-                'Authorization': 'Bearer ' + API_KEY,
+                'Authorization': 'Bearer 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' ,
                 'Content-Type':'application/json'
             },
             body: JSON.stringify(apiRequestBody)
