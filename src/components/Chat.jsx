@@ -3,7 +3,7 @@ import { MainContainer, ChatContainer, MessageList, Message, MessageInput, Typin
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const API_KEY ='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'
+const API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
 
 function Chat ({data}) {
     const [typing, setTyping] = useState(false)
@@ -61,7 +61,7 @@ function Chat ({data}) {
         await fetch('https://api.openai.com/v1/chat/completions',{
             method:'POST',
             headers:{
-                'Authorization': 'Bearer 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' ,
+                'Authorization': 'Bearer ' + API_KEY ,
                 'Content-Type':'application/json'
             },
             body: JSON.stringify(apiRequestBody)
